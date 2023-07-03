@@ -1,14 +1,15 @@
 <?php
+require 'Core/Container.php';
 
-use Core\Container;
+require 'Core/App.php';
 
 use Core\Database;
 
 use Core\App;
 
-require 'Core/Container.php';
+use Core\Container;
 
-require 'Core/App.php';
+
 
 $container = new Container();
 

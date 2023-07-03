@@ -12,23 +12,29 @@
             <input type="submit" class="text-red-500">
         </form>
     </div>
+    <?php foreach($jobs as $job): ?>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-    <?php
-        // Check if the $jobs variable is set and not empty before iterating over it
-        if (isset($jobs) && !empty($jobs)) {
-            foreach ($jobs as $job) {
-                // Display job information
-                echo $job['title'];
-                // ...other job details
-            }
-        } else {
-            // Handle the case when $jobs is not defined or empty
-            echo "No jobs found.";
-        }
-    ?>
-
-
+        <div class="grid grid-cols-3">
+            <div>
+                <h2><?= $job['title']?></h2>
+                <p><?= "$ " . $job['salary_range']?></p>
+            </div>
+            <div>
+                <p>..</p>
+                <img src="" alt="logo">
+            </div>
+            <div class="flex">
+                <div>
+                    <p>Logo</p>
+                </div>
+                <div>
+                     <p>Company</p>
+                    <p>last active</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <?php endforeach ;?>
 </main>
 
 <?php require('partials/footer.php') ?>
