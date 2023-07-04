@@ -9,5 +9,4 @@ $jobs = $db->query('SELECT * FROM jobs')->get();
 require '../views/jobs.view.php';
 // view('jobs.view.php');
 
-$_SESSION['name'] = "DONA";
 ?>
